@@ -1,0 +1,11 @@
+<div class="container py-5">
+    <h1><%= @pet.name %></h1>
+    <p class="card-text">
+    <p class="card-text">
+    <p><%= @pet.species %> / Found <%= @pet.found_days_ago ? 'today' : 
+    "#{pluralize(@pet.found_days_ago, 'day')} ago" %> in <%= @pet.location %>
+    </p>
+    <%= link_to "Back to list", root_path, class: "btn btn-warning" %>
+    <%= link_to "Edit", edit_pet_path(@pet), class: "btn btn-secondary" %>
+    <%= link_to "Delete", @pet, class: "btn btn-danger", method: :delete, data: {confirm: "Are you sure?"} %>
+</div>

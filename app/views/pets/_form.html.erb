@@ -1,0 +1,8 @@
+<%= simple_form_for pet do |f| %>
+<%= f.input :name %>
+<%= f.input :species, collection: Pet::SPECIES %>
+<%= f.input :date, html5: true %>
+<%= f.input :image_url %>
+<%= f.input :location, label: "Found close by", placeholder: "Canggu" %>
+<%= f.submit "Confirm", class: "btn btn-primary" %>
+<% end %>
